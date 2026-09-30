@@ -15,11 +15,11 @@ export function computeAssetChecksum(buffer: Buffer): string {
   // compute the md5 hash of the buffer
   const hash = createHash("md5");
   hash.update(buffer);
-  const checksum = hash.digest("hex");
+  const digest = hash.digest("hex");
 
   // TODO: make this faster
 
-  return checksum;
+  return digest;
 }
 
 /**
